@@ -1,8 +1,10 @@
 # Vegetation Pond Classification Challenge
 
+![Vegetation Pond NDWI trends](eda_ndwi_temporal.png)
+
 ## Overview
 
-This repository contains a comprehensive machine learning solution for classifying vegetation pond characteristics using satellite and environmental data. The project applies advanced data science techniques including exploratory data analysis (EDA), feature engineering, and ensemble modeling to deliver high-performance predictions.
+This repository contains a comprehensive machine learning solution for classifying vegetation pond characteristics using satellite and environmental data. The project applies advanced data science techniques to extract, model, and explain the signals that differentiate vegetation pond classes. The notebooks walk through exploratory data analysis, feature engineering, model training, and final prediction generation.
 
 ## Project Structure
 
@@ -16,6 +18,10 @@ The analysis is organized into four sequential Jupyter notebooks:
    - Correlation analysis and temporal pattern investigation
    - Class balance evaluation and NDWI (Normalized Difference Water Index) temporal trends
    - Visualization of key patterns and anomalies
+   
+   Example visualizations from EDA:
+   - ![Distributions](eda_distributions.png)  
+   - ![Correlation heatmap](eda_correlation.png)
 
 2. **`02_feature_engineering.ipynb`** - Feature Engineering
    - Creation and selection of predictive features
@@ -32,11 +38,18 @@ The analysis is organized into four sequential Jupyter notebooks:
    - SHAP (SHapley Additive exPlanations) analysis for interpretability
    - Calibration curve assessment and confusion matrix analysis
 
+   Key model results (click to open full-size):
+   - [![Model comparison](model_comparison.png)](model_comparison.png)
+   - [![Confusion matrices](confusion_matrices.png)](confusion_matrices.png)
+
 4. **`04_submission.ipynb`** - Final Predictions & Submission
    - Application of trained models to test data
    - Probability distribution analysis
    - Generation of final submission file
    - Model validation and confidence assessment
+
+   Prediction distribution example:
+   - ![Test probability distribution](test_prob_distribution.png)
 
 ### Data Files
 
@@ -64,16 +77,18 @@ The analysis is organized into four sequential Jupyter notebooks:
 - `test_probs.pkl` - Test set probability predictions
 
 #### Visualizations
-- `eda_distributions.png` - Feature distributions
-- `eda_correlation.png` - Correlation heatmap
-- `eda_class_balance.png` - Class balance visualization
-- `eda_missingness.png` - Missing data patterns
-- `eda_ndwi_temporal.png` - NDWI temporal trends
-- `model_comparison.png` - Model performance comparison
-- `confusion_matrices.png` - Classification matrices
-- `calibration_curve.png` - Model calibration analysis
-- `shap_importance.png` - Feature importance via SHAP
-- `test_prob_distribution.png` - Test set prediction distribution
+A selection of key figures produced during the analysis. Click thumbnails to view full images.
+
+- [![EDA distributions](eda_distributions.png)](eda_distributions.png) - Feature distributions
+- [![Correlation heatmap](eda_correlation.png)](eda_correlation.png) - Correlation heatmap
+- [![Class balance](eda_class_balance.png)](eda_class_balance.png) - Class balance visualization
+- [![Missingness](eda_missingness.png)](eda_missingness.png) - Missing data patterns
+- [![NDWI temporal trends](eda_ndwi_temporal.png)](eda_ndwi_temporal.png) - NDWI temporal trends
+- [![Model comparison](model_comparison.png)](model_comparison.png) - Model performance comparison
+- [![Confusion matrices](confusion_matrices.png)](confusion_matrices.png) - Classification matrices
+- [![Calibration curve](calibration_curve.png)](calibration_curve.png) - Model calibration analysis
+- [![SHAP importance](shap_importance.png)](shap_importance.png) - Feature importance via SHAP
+- [![Test probability distribution](test_prob_distribution.png)](test_prob_distribution.png) - Test set prediction distribution
 
 ## Key Findings
 
@@ -138,7 +153,10 @@ The ensemble approach combines multiple algorithms to achieve:
 - High interpretability through SHAP analysis
 - Strong generalization to held-out test data
 
-See `model_comparison.png` and `confusion_matrices.png` for detailed performance visualizations.
+See the images below for detailed performance visualizations:
+
+[![Model comparison](model_comparison.png)](model_comparison.png)
+[![Confusion matrices](confusion_matrices.png)](confusion_matrices.png)
 
 ## Feature Importance
 
@@ -147,7 +165,9 @@ The most impactful features are identified through:
 - SHAP additive feature attribution
 - Cross-validation analysis
 
-See `shap_importance.png` for the complete feature ranking.
+See the SHAP summary:
+
+[![SHAP importance](shap_importance.png)](shap_importance.png)
 
 ## Calibration & Reliability
 
@@ -156,7 +176,19 @@ Probability calibration ensures predictions reflect true likelihoods:
 - Confidence interval estimation
 - Reliability assessment across probability ranges
 
-See `calibration_curve.png` for calibration performance.
+See the calibration performance:
+
+[![Calibration curve](calibration_curve.png)](calibration_curve.png)
+
+## Gallery (quick previews)
+
+Click any thumbnail to open the full image in the repository:
+
+- [![NDWI temporal trends](eda_ndwi_temporal.png)](eda_ndwi_temporal.png)
+- [![EDA distributions](eda_distributions.png)](eda_distributions.png)
+- [![Correlation heatmap](eda_correlation.png)](eda_correlation.png)
+- [![SHAP importance](shap_importance.png)](shap_importance.png)
+- [![Model comparison](model_comparison.png)](model_comparison.png)
 
 ## Contributing
 
